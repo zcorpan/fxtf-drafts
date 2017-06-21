@@ -376,7 +376,7 @@ steps:
 
 <pre class=idl>
 [NoInterfaceObject,
- ArrayClass]
+ LegacyArrayClass]
 interface DOMRectList {
     readonly attribute unsigned long length;
     getter DOMRect? item(unsigned long index);
@@ -2163,7 +2163,7 @@ Draft</a>.
 
  <li><p>{{DOMMatrixReadOnly}} got a constructor taking a sequence of numbers as argument.
 
- <li><p>{{DOMRectList}} turned to an ArrayClass. The interfaces can just be used for legacy
+ <li><p>{{DOMRectList}} turned to a LegacyArrayClass. The interfaces can just be used for legacy
  interfaces.
 
  <li><p>Put {{DOMRectList}} on at-Risk awaiting browser feedback.
