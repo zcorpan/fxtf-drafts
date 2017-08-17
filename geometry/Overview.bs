@@ -2079,7 +2079,7 @@ this specification will not support <code>MSCSSMatrix</code>.
 <p><em>This section is non-normative.</em>
 
 <p>The following changes were made since the <a
-href="https://www.w3.org/TR/2014/WD-geometry-1-20140918/">18 September 2014 Working Draft</a>.
+href="https://www.w3.org/TR/2014/CR-geometry-1-20141125/">25 November 2014 Candidate Recommendation</a>.
 
 <ul>
  <li><p>Changed the interfaces to generally use specific static operations for construction instead
@@ -2112,11 +2112,10 @@ href="https://www.w3.org/TR/2014/WD-geometry-1-20140918/">18 September 2014 Work
    <li><p>Defined {{WebKitCSSMatrix}} to be a legacy window alias for {{DOMMatrix}}.
   </ul>
 
- <li><p>Exposed {{DOMPointReadOnly}}, {{DOMPoint}}, {{DOMRectReadOnly}}, {{DOMRect}}, {{DOMQuad}},
- {{DOMMatrixReadOnly}} and {{DOMMatrix}} to {{Window}} and {{Worker}}. In workers, {{DOMMatrix}} and
- {{DOMMatrixReadOnly}} do not support parsing or stringifying with CSS syntax.
+ <li><p>In workers, {{DOMMatrix}} and {{DOMMatrixReadOnly}} were changed to not support parsing or
+ stringifying with CSS syntax.
 
- <li><p>Defined structured serialization of the interfaces.
+ <li><p>Defined structured serialization of the interfaces, replacing the "cloning steps".
 
  <li><p>The live <code>bounds</code> attribute on {{DOMQuad}} was replaced with a non-live
  {{DOMQuad/getBounds()}} method. The "associated bounding rectangle" concept was also removed.
@@ -2130,6 +2129,15 @@ href="https://www.w3.org/TR/2014/WD-geometry-1-20140918/">18 September 2014 Work
  <li><p>Made comparisons treat ''0'' and ''-0'' as equal throughout.
 
  <li><p>Added [[#priv-sec]] and [[#historical]] sections.
+</ul>
+
+<p>The following changes were made since the <a
+href="https://www.w3.org/TR/2014/WD-geometry-1-20140918/">18 September 2014 Working Draft</a>.
+
+<ul>
+ <li><p>Exposed {{DOMPointReadOnly}}, {{DOMPoint}}, {{DOMRectReadOnly}}, {{DOMRect}}, {{DOMQuad}},
+ {{DOMMatrixReadOnly}} and {{DOMMatrix}} to {{Window}} and {{Worker}}. Defined cloning of the
+ interfaces.
 </ul>
 
 <p>The following changes were made since the <a
