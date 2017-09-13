@@ -7,8 +7,9 @@
   <link href="../default.css" rel="stylesheet" type="text/css">
   <link href="../csslogo.ico" rel="shortcut icon" type="image/x-icon">
   <link href="https://www.w3.org/StyleSheets/TR/2016/W3C-WD" rel="stylesheet" type="text/css">
-  <meta content="Bikeshed version 703f6db9e284db713dfef94b41302880e3e85262" name="generator">
+  <meta content="Bikeshed version 6675465218f7813fa6c3cfedf0a0e503b6d8b918" name="generator">
   <link href="https://www.w3.org/TR/geometry-1/" rel="canonical">
+  <meta content="86d3ce5fc44577e3662d80125a8ffad22bd3dd7d" name="document-revision">
 <script defer="" src="https://test.csswg.org/harness/annotate.js#!geometry-1_dev/geometry-1" type="text/javascript"></script>
 <style>
 a.selected-text-file-an-issue {
@@ -23,60 +24,60 @@ a.selected-text-file-an-issue {
 </style>
 <style>/* style-md-lists */
 
-            /* This is a weird hack for me not yet following the commonmark spec
-               regarding paragraph and lists. */
-            [data-md] > :first-child {
-                margin-top: 0;
-            }
-            [data-md] > :last-child {
-                margin-bottom: 0;
-            }</style>
+/* This is a weird hack for me not yet following the commonmark spec
+   regarding paragraph and lists. */
+[data-md] > :first-child {
+    margin-top: 0;
+}
+[data-md] > :last-child {
+    margin-bottom: 0;
+}</style>
 <style>/* style-selflinks */
 
-            .heading, .issue, .note, .example, li, dt {
-                position: relative;
-            }
-            a.self-link {
-                position: absolute;
-                top: 0;
-                left: calc(-1 * (3.5rem - 26px));
-                width: calc(3.5rem - 26px);
-                height: 2em;
-                text-align: center;
-                border: none;
-                transition: opacity .2s;
-                opacity: .5;
-            }
-            a.self-link:hover {
-                opacity: 1;
-            }
-            .heading > a.self-link {
-                font-size: 83%;
-            }
-            li > a.self-link {
-                left: calc(-1 * (3.5rem - 26px) - 2em);
-            }
-            dfn > a.self-link {
-                top: auto;
-                left: auto;
-                opacity: 0;
-                width: 1.5em;
-                height: 1.5em;
-                background: gray;
-                color: white;
-                font-style: normal;
-                transition: opacity .2s, background-color .2s, color .2s;
-            }
-            dfn:hover > a.self-link {
-                opacity: 1;
-            }
-            dfn > a.self-link:hover {
-                color: black;
-            }
+.heading, .issue, .note, .example, li, dt {
+    position: relative;
+}
+a.self-link {
+    position: absolute;
+    top: 0;
+    left: calc(-1 * (3.5rem - 26px));
+    width: calc(3.5rem - 26px);
+    height: 2em;
+    text-align: center;
+    border: none;
+    transition: opacity .2s;
+    opacity: .5;
+}
+a.self-link:hover {
+    opacity: 1;
+}
+.heading > a.self-link {
+    font-size: 83%;
+}
+li > a.self-link {
+    left: calc(-1 * (3.5rem - 26px) - 2em);
+}
+dfn > a.self-link {
+    top: auto;
+    left: auto;
+    opacity: 0;
+    width: 1.5em;
+    height: 1.5em;
+    background: gray;
+    color: white;
+    font-style: normal;
+    transition: opacity .2s, background-color .2s, color .2s;
+}
+dfn:hover > a.self-link {
+    opacity: 1;
+}
+dfn > a.self-link:hover {
+    color: black;
+}
 
-            a.self-link::before            { content: "¶"; }
-            .heading > a.self-link::before { content: "§"; }
-            dfn > a.self-link::before      { content: "#"; }</style>
+a.self-link::before            { content: "¶"; }
+.heading > a.self-link::before { content: "§"; }
+dfn > a.self-link::before      { content: "#"; }</style>
 <style>/* style-caniuse-panel */
 
             .caniuse-status { font: 1em sans-serif; width: 9em; padding: 0.3em; position: absolute; z-index: 8; top: auto; right: 0.3em; background: #EEE; color: black; box-shadow: 0 0 3px #999; overflow: hidden; border-collapse: initial; border-spacing: initial; }
@@ -120,95 +121,95 @@ a.selected-text-file-an-issue {
             }</style>
 <style>/* style-counters */
 
-            body {
-                counter-reset: example figure issue;
-            }
-            .issue {
-                counter-increment: issue;
-            }
-            .issue:not(.no-marker)::before {
-                content: "Issue " counter(issue);
-            }
+body {
+    counter-reset: example figure issue;
+}
+.issue {
+    counter-increment: issue;
+}
+.issue:not(.no-marker)::before {
+    content: "Issue " counter(issue);
+}
 
-            .example {
-                counter-increment: example;
-            }
-            .example:not(.no-marker)::before {
-                content: "Example " counter(example);
-            }
-            .invalid.example:not(.no-marker)::before,
-            .illegal.example:not(.no-marker)::before {
-                content: "Invalid Example" counter(example);
-            }
+.example {
+    counter-increment: example;
+}
+.example:not(.no-marker)::before {
+    content: "Example " counter(example);
+}
+.invalid.example:not(.no-marker)::before,
+.illegal.example:not(.no-marker)::before {
+    content: "Invalid Example" counter(example);
+}
 
-            figcaption {
-                counter-increment: figure;
-            }
-            figcaption:not(.no-marker)::before {
-                content: "Figure " counter(figure) " ";
-            }</style>
+figcaption {
+    counter-increment: figure;
+}
+figcaption:not(.no-marker)::before {
+    content: "Figure " counter(figure) " ";
+}</style>
 <style>/* style-autolinks */
 
-            .css.css, .property.property, .descriptor.descriptor {
-                color: #005a9c;
-                font-size: inherit;
-                font-family: inherit;
-            }
-            .css::before, .property::before, .descriptor::before {
-                content: "‘";
-            }
-            .css::after, .property::after, .descriptor::after {
-                content: "’";
-            }
-            .property, .descriptor {
-                /* Don't wrap property and descriptor names */
-                white-space: nowrap;
-            }
-            .type { /* CSS value <type> */
-                font-style: italic;
-            }
-            pre .property::before, pre .property::after {
-                content: "";
-            }
-            [data-link-type="property"]::before,
-            [data-link-type="propdesc"]::before,
-            [data-link-type="descriptor"]::before,
-            [data-link-type="value"]::before,
-            [data-link-type="function"]::before,
-            [data-link-type="at-rule"]::before,
-            [data-link-type="selector"]::before,
-            [data-link-type="maybe"]::before {
-                content: "‘";
-            }
-            [data-link-type="property"]::after,
-            [data-link-type="propdesc"]::after,
-            [data-link-type="descriptor"]::after,
-            [data-link-type="value"]::after,
-            [data-link-type="function"]::after,
-            [data-link-type="at-rule"]::after,
-            [data-link-type="selector"]::after,
-            [data-link-type="maybe"]::after {
-                content: "’";
-            }
+.css.css, .property.property, .descriptor.descriptor {
+    color: #005a9c;
+    font-size: inherit;
+    font-family: inherit;
+}
+.css::before, .property::before, .descriptor::before {
+    content: "‘";
+}
+.css::after, .property::after, .descriptor::after {
+    content: "’";
+}
+.property, .descriptor {
+    /* Don't wrap property and descriptor names */
+    white-space: nowrap;
+}
+.type { /* CSS value <type> */
+    font-style: italic;
+}
+pre .property::before, pre .property::after {
+    content: "";
+}
+[data-link-type="property"]::before,
+[data-link-type="propdesc"]::before,
+[data-link-type="descriptor"]::before,
+[data-link-type="value"]::before,
+[data-link-type="function"]::before,
+[data-link-type="at-rule"]::before,
+[data-link-type="selector"]::before,
+[data-link-type="maybe"]::before {
+    content: "‘";
+}
+[data-link-type="property"]::after,
+[data-link-type="propdesc"]::after,
+[data-link-type="descriptor"]::after,
+[data-link-type="value"]::after,
+[data-link-type="function"]::after,
+[data-link-type="at-rule"]::after,
+[data-link-type="selector"]::after,
+[data-link-type="maybe"]::after {
+    content: "’";
+}
 
-            [data-link-type].production::before,
-            [data-link-type].production::after,
-            .prod [data-link-type]::before,
-            .prod [data-link-type]::after {
-                content: "";
-            }
+[data-link-type].production::before,
+[data-link-type].production::after,
+.prod [data-link-type]::before,
+.prod [data-link-type]::after {
+    content: "";
+}
 
-            [data-link-type=element],
-            [data-link-type=element-attr] {
-                font-family: Menlo, Consolas, "DejaVu Sans Mono", monospace;
-                font-size: .9em;
-            }
-            [data-link-type=element]::before { content: "<" }
-            [data-link-type=element]::after  { content: ">" }
+[data-link-type=element],
+[data-link-type=element-attr] {
+    font-family: Menlo, Consolas, "DejaVu Sans Mono", monospace;
+    font-size: .9em;
+}
+[data-link-type=element]::before { content: "<" }
+[data-link-type=element]::after  { content: ">" }
 
-            [data-link-type=biblio] {
-                white-space: pre;
-            }</style>
+[data-link-type=biblio] {
+    white-space: pre;
+}</style>
 <style>/* style-dfn-panel */
 
         .dfn-panel {
@@ -308,11 +309,11 @@ pre.highlight, pre > code.highlight { display: block; padding: 1em; margin: .5em
   <div class="head">
    <p data-fill-with="logo"><a class="logo" href="https://www.w3.org/"> <img alt="W3C" height="48" src="https://www.w3.org/StyleSheets/TR/2016/logos/W3C" width="72"> </a> </p>
    <h1>Geometry Interfaces Module Level 1</h1>
-   <h2 class="no-num no-toc no-ref heading settled" id="subtitle"><span class="content">W3C Working Draft, <time class="dt-updated" datetime="2017-08-17">17 August 2017</time></span></h2>
+   <h2 class="no-num no-toc no-ref heading settled" id="subtitle"><span class="content">W3C Working Draft, <time class="dt-updated" datetime="2017-09-13">13 September 2017</time></span></h2>
    <div data-fill-with="spec-metadata">
     <dl>
      <dt>This version:
-     <dd><a class="u-url" href="https://www.w3.org/TR/2017/WD-geometry-1-20170817/">https://www.w3.org/TR/2017/WD-geometry-1-20170817/</a>
+     <dd><a class="u-url" href="https://www.w3.org/TR/2017/WD-geometry-1-20170913/">https://www.w3.org/TR/2017/WD-geometry-1-20170913/</a>
      <dt>Latest published version:
      <dd><a href="https://www.w3.org/TR/geometry-1/">https://www.w3.org/TR/geometry-1/</a>
      <dt>Editor's Draft:
@@ -327,7 +328,7 @@ pre.highlight, pre > code.highlight { display: block; padding: 1em; margin: .5em
      <dd><a href="http://test.csswg.org/suites/geometry-1_dev/nightly-unstable/">http://test.csswg.org/suites/geometry-1_dev/nightly-unstable/</a>
      <dt>Issue Tracking:
      <dd><a href="https://www.w3.org/Bugs/Public/buglist.cgi?product=FXTF&amp;amp;component=Geometry&amp;amp;resolution=---">Legacy open bugs</a>
-     <dd><span><a href="https://github.com/w3c/fxtf-drafts/labels/geometry-1">GitHub Issues</a></span>
+     <dd>&lt;a href='https://github.com/w3c/fxtf-drafts/labels/[VSHORTNAME]'>GitHub Issues&lt;/a>
      <dt class="editor">Editor:
      <dd class="editor p-author h-card vcard"><a class="p-name fn u-email email" href="mailto:simonp@opera.com">Simon Pieters</a> (<span class="p-org org">Opera Software AS</span>)
      <dt class="editor">Former Editors:
@@ -2149,7 +2150,7 @@ this specification will not support <code>MSCSSMatrix</code>. </p>
      <p>The following changes were made since the <a href="https://www.w3.org/TR/2014/WD-geometry-1-20140918/">18 September 2014 Working Draft</a>. </p>
      <ul>
       <li>
-       <p>Exposed <code class="idl"><a data-link-type="idl" href="#dompointreadonly" id="ref-for-dompointreadonly①②">DOMPointReadOnly</a></code>, <code class="idl"><a data-link-type="idl" href="#dompoint" id="ref-for-dompoint③⑥">DOMPoint</a></code>, <code class="idl"><a data-link-type="idl" href="#domrectreadonly" id="ref-for-domrectreadonly①②">DOMRectReadOnly</a></code>, <code class="idl"><a data-link-type="idl" href="#domrect" id="ref-for-domrect①⑦">DOMRect</a></code>, <code class="idl"><a data-link-type="idl" href="#domquad" id="ref-for-domquad①⑨">DOMQuad</a></code>, <code class="idl"><a data-link-type="idl" href="#dommatrixreadonly" id="ref-for-dommatrixreadonly③⑥">DOMMatrixReadOnly</a></code> and <code class="idl"><a data-link-type="idl" href="#dommatrix" id="ref-for-dommatrix⑦⑨">DOMMatrix</a></code> to <code class="idl"><a data-link-type="idl" href="https://html.spec.whatwg.org/multipage/window-object.html#window" id="ref-for-window①">Window</a></code> and <code class="idl"><a data-link-type="idl" href="https://html.spec.whatwg.org/multipage/workers.html#worker" id="ref-for-worker">Worker</a></code>. Defined cloning of the
+       <p>Exposed <code class="idl"><a data-link-type="idl" href="#dompointreadonly" id="ref-for-dompointreadonly①②">DOMPointReadOnly</a></code>, <code class="idl"><a data-link-type="idl" href="#dompoint" id="ref-for-dompoint③⑥">DOMPoint</a></code>, <code class="idl"><a data-link-type="idl" href="#domrectreadonly" id="ref-for-domrectreadonly①②">DOMRectReadOnly</a></code>, <code class="idl"><a data-link-type="idl" href="#domrect" id="ref-for-domrect①⑦">DOMRect</a></code>, <code class="idl"><a data-link-type="idl" href="#domquad" id="ref-for-domquad①⑨">DOMQuad</a></code>, <code class="idl"><a data-link-type="idl" href="#dommatrixreadonly" id="ref-for-dommatrixreadonly③⑥">DOMMatrixReadOnly</a></code> and <code class="idl"><a data-link-type="idl" href="#dommatrix" id="ref-for-dommatrix⑦⑨">DOMMatrix</a></code> to <code class="idl"><a data-link-type="idl" href="https://html.spec.whatwg.org/multipage/window-object.html#window" id="ref-for-window①">Window</a></code> and <code class="idl"><a data-link-type="idl" href="https://html.spec.whatwg.org/multipage/workers.html#worker-2" id="ref-for-worker-2">Worker</a></code>. Defined cloning of the
  interfaces. </p>
      </ul>
      <p>The following changes were made since the <a href="https://www.w3.org/TR/2014/WD-geometry-1-20140626/">26 June 2014 Last Call Public Working
@@ -2297,7 +2298,7 @@ for their careful reviews, comments, and corrections. </p>
   <aside class="caniuse-status" data-deco="" data-dfn-id="matrix">
    <input class="caniuse-panel-btn" type="button" value="⋰">
    <p class="support"><b>Support:</b><span class="android partial"><span><span>Android Browser (limited)</span></span><span>4+</span></span><span class="baidu partial"><span><span>Baidu Browser (limited)</span></span><span>7.12+</span></span><span class="bb partial"><span><span>Blackberry Browser (limited)</span></span><span>10+</span></span><span class="chrome partial"><span><span>Chrome (limited)</span></span><span>8+</span></span><span class="and_chr partial"><span><span>Chrome for Android (limited)</span></span><span>59+</span></span><span class="edge partial"><span><span>Edge (limited)</span></span><span>12+</span></span><span class="firefox yes"><span>Firefox</span><span>49+</span></span><span class="and_ff yes"><span>Firefox for Android</span><span>55+</span></span><span class="ie partial"><span><span>IE (limited)</span></span><span>10+</span></span><span class="ie_mob partial"><span><span>IE Mobile (limited)</span></span><span>10+</span></span><span class="opera partial"><span><span>Opera (limited)</span></span><span>15+</span></span><span class="op_mini no"><span>Opera Mini</span><span>None</span></span><span class="op_mob partial"><span><span>Opera Mobile (limited)</span></span><span>37+</span></span><span class="and_qq partial"><span><span>QQ Browser (limited)</span></span><span>1.2+</span></span><span class="safari yes"><span>Safari</span><span>11+</span></span><span class="samsung partial"><span><span>Samsung Internet (limited)</span></span><span>4+</span></span><span class="and_uc partial"><span><span>UC Browser for Android (limited)</span></span><span>11.4+</span></span><span class="ios_saf partial"><span><span>iOS Safari (limited)</span></span><span>5.0+</span></span></p>
-   <p class="caniuse">Source: <a href="https://caniuse.com/#feat=dommatrix">caniuse.com</a> as of 2017-08-11</p>
+   <p class="caniuse">Source: <a href="https://caniuse.com/#feat=dommatrix">caniuse.com</a> as of 2017-09-11</p>
   </aside>
   <h2 class="no-num no-ref heading settled" id="index"><span class="content">Index</span><a class="self-link" href="#index"></a></h2>
   <h3 class="no-num no-ref heading settled" id="index-defined-here"><span class="content">Terms defined by this specification</span><a class="self-link" href="#index-defined-here"></a></h3>
@@ -2751,6 +2752,10 @@ for their careful reviews, comments, and corrections. </p>
     <a data-link-type="biblio">[css-values-3]</a> defines the following terms:
     <ul>
      <li><a href="https://www.w3.org/TR/css3-values/#length-value">&lt;length></a>
+    </ul>
+   <li>
+    <a data-link-type="biblio">[css-values-4]</a> defines the following terms:
+    <ul>
      <li><a href="https://drafts.csswg.org/css-values-4/#absolute-length">absolute length</a>
     </ul>
    <li>
@@ -2782,7 +2787,7 @@ for their careful reviews, comments, and corrections. </p>
     <ul>
      <li><a href="https://html.spec.whatwg.org/multipage/structured-data.html#serializable">Serializable</a>
      <li><a href="https://html.spec.whatwg.org/multipage/window-object.html#window">Window</a>
-     <li><a href="https://html.spec.whatwg.org/multipage/workers.html#worker">Worker</a>
+     <li><a href="https://html.spec.whatwg.org/multipage/workers.html#worker-2">Worker</a>
      <li><a href="https://html.spec.whatwg.org/multipage/webappapis.html#current-global-object">current global object</a>
      <li><a href="https://html.spec.whatwg.org/multipage/structured-data.html#deserialization-steps">deserialization steps</a>
      <li><a href="https://html.spec.whatwg.org/multipage/structured-data.html#serializable-objects">serializable objects</a>
@@ -2811,8 +2816,6 @@ for their careful reviews, comments, and corrections. </p>
   <h2 class="no-num no-ref heading settled" id="references"><span class="content">References</span><a class="self-link" href="#references"></a></h2>
   <h3 class="no-num no-ref heading settled" id="normative"><span class="content">Normative References</span><a class="self-link" href="#normative"></a></h3>
   <dl>
-   <dt id="biblio-css-transforms-2">[CSS-TRANSFORMS-2]
-   <dd>CSS Transforms Module Level 2 URL: <a href="https://drafts.csswg.org/css-transforms-2/">https://drafts.csswg.org/css-transforms-2/</a>
    <dt id="biblio-css-values-3">[CSS-VALUES-3]
    <dd>Tab Atkins Jr.; Elika Etemad. <a href="https://www.w3.org/TR/css-values-3/">CSS Values and Units Module Level 3</a>. URL: <a href="https://www.w3.org/TR/css-values-3/">https://www.w3.org/TR/css-values-3/</a>
    <dt id="biblio-css3-syntax">[CSS3-SYNTAX]
