@@ -569,7 +569,7 @@ algorithm:
  </code></pre>
 
  <figure>
-  <svg width="230" height="200" aria-role="img" aria-label="An irregular quadrilateral with none of
+  <svg width="230" height="200" role="img" aria-label="An irregular quadrilateral with none of
   the sides being vertical or horizontal. Its four corners are marked with red circles. Around this
   quadrilateral is a dashed rectangle. All sides of this rectangle are vertical or horizontal and
   tangent the quadrilateral.">
